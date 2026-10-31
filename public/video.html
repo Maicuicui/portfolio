@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>作品视频 · 麦林杰</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    min-height: 100vh;
+    background: #0b0e1a;
+    color: #e8ecf4;
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+  }
+  .wrap { width: min(1100px, 100%); }
+  .kicker {
+    font-size: 12px;
+    letter-spacing: 0.35em;
+    color: #45e0c8;
+    margin-bottom: 12px;
+  }
+  h1 { font-size: clamp(22px, 4vw, 34px); margin-bottom: 6px; }
+  .meta { font-size: 14px; color: #93a0b8; margin-bottom: 24px; }
+  .player {
+    position: relative;
+    width: 100%;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+  }
+  video {
+    display: block;
+    width: 100%;
+    max-height: 72vh;
+    background: #000;
+  }
+  .back {
+    display: inline-block;
+    margin-top: 28px;
+    font-size: 14px;
+    color: #45e0c8;
+    text-decoration: none;
+    border: 1px solid rgba(69, 224, 200, 0.45);
+    border-radius: 999px;
+    padding: 10px 22px;
+    transition: all 0.25s;
+  }
+  .back:hover { background: rgba(69, 224, 200, 0.12); }
+  .err { color: #93a0b8; padding: 40px 0; text-align: center; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="kicker">MAI LINJIE · PORTFOLIO</p>
+    <h1 id="title">加载中…</h1>
+    <p class="meta" id="meta"></p>
+    <div class="player" id="player"><p class="err">未找到指定视频</p></div>
+    <a class="back" href="/">← 查看完整作品集</a>
+  </div>
+
+<script>
+  const VIDEOS = {
+    showreel:   { src: '/videos/showreel.mp4',  title: '个人作品集混剪',              meta: '视觉设计 · 剪辑合成 · AI 创作' },
+    shangban:   { src: '/videos/shangban.mp4',  title: '《上班》',                    meta: '后期建模 · AI 动画 · Cinema 4D / 即梦 AI' },
+    'slice-main':   { src: '/videos/slice-main.mp4',  title: 'PR剪映剪辑产品切片宣传片',  meta: '拍摄剪辑专员 · Premiere Pro / 剪映' },
+    luozhang:   { src: '/videos/luozhang.mp4',  title: '螺章囡囡人物IP设计AI动画',    meta: '项目组长 · Cinema 4D / 即梦 AI' },
+    beihai:     { src: '/videos/beihai.mp4',    title: '北海文旅特效宣传片',          meta: '后期特效师 · After Effects' },
+  }
+
+  const key = new URLSearchParams(location.search).get('v') || 'showreel'
+  const v = VIDEOS[key]
+  const player = document.getElementById('player')
+
+  if (v) {
+    document.title = v.title + ' · 麦林杰'
+    document.getElementById('title').textContent = v.title
+    document.getElementById('meta').textContent = v.meta
+    player.innerHTML =
+      '<video src="' + v.src + '" controls playsinline webkit-playsinline preload="auto"></video>'
+  }
+</script>
+</body>
+</html>

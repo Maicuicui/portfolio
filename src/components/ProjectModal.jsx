@@ -67,7 +67,7 @@ export default function ProjectModal({ project, onClose }) {
                     aria-label={isVideo ? `播放第 ${i + 1} 个案例` : `查看第 ${i + 1} 张照片`}
                   >
                     {isVideo ? (
-                      <video src={src} controls playsInline preload="metadata" />
+                      <video src={src} controls playsInline preload="auto" />
                     ) : (
                       <img src={src} alt={`${project.title} 分镜 ${i + 1}`} loading="lazy" />
                     )}

@@ -1,7 +1,7 @@
 // 全站内容与素材配置（基于简历整理）
 // 图片为本地生成素材，位于 public/images/
 
-export const PORTRAIT = '/images/portrait.jpg'
+export const PORTRAIT = '/images/portrait.webp'
 
 // 头部背景视频：把你的视频作品放到 public/videos/ 下，改下面 src 即可（poster 为加载前封面，可留空）
 export const HERO_VIDEO = {
@@ -18,17 +18,17 @@ export const BGM = {
 // 首屏人物贴纸（已抠图透明 PNG）：sticker 为鼠标悬停在该人物上时浮出的对应照片
 // 11 个人物依次对应 10 张照片；没有照片的人物把 sticker 留空即可
 export const CHARACTERS = [
-  { src: '/images/characters/pose-1.png', sticker: '/images/characters/sticker-1.png' },
-  { src: '/images/characters/pose-2.png', sticker: '/images/characters/sticker-3.jpg' },
-  { src: '/images/characters/pose-3.png', sticker: '/images/characters/sticker-2.jpg' },
-  { src: '/images/characters/pose-4.png', sticker: '/images/characters/sticker-4.jpg' },
-  { src: '/images/characters/pose-5.png', sticker: '/images/characters/sticker-5.jpg' },
-  { src: '/images/characters/pose-6.png', sticker: '/images/characters/sticker-6.jpg' },
-  { src: '/images/characters/pose-7.png', sticker: '/images/characters/sticker-7.jpg' },
-  { src: '/images/characters/pose-8.png', sticker: '/images/characters/sticker-8.jpg' },
-  { src: '/images/characters/pose-9.png', sticker: '/images/characters/sticker-9.jpg' },
-  { src: '/images/characters/pose-10.png', sticker: '/images/characters/sticker-10.jpg' },
-  { src: '/images/characters/pose-11.png', sticker: '' },
+  { src: '/images/characters/pose-1.webp', sticker: '/images/characters/sticker-1.webp' },
+  { src: '/images/characters/pose-2.webp', sticker: '/images/characters/sticker-3.webp' },
+  { src: '/images/characters/pose-3.webp', sticker: '/images/characters/sticker-2.webp' },
+  { src: '/images/characters/pose-4.webp', sticker: '/images/characters/sticker-4.webp' },
+  { src: '/images/characters/pose-5.webp', sticker: '/images/characters/sticker-5.webp' },
+  { src: '/images/characters/pose-6.webp', sticker: '/images/characters/sticker-6.webp' },
+  { src: '/images/characters/pose-7.webp', sticker: '/images/characters/sticker-7.webp' },
+  { src: '/images/characters/pose-8.webp', sticker: '/images/characters/sticker-8.webp' },
+  { src: '/images/characters/pose-9.webp', sticker: '/images/characters/sticker-9.webp' },
+  { src: '/images/characters/pose-10.webp', sticker: '/images/characters/sticker-10.webp' },
+  { src: '/images/characters/pose-11.webp', sticker: '' },
 ]
 
 export const NAV_LINKS = [
@@ -75,11 +75,11 @@ export const PROJECTS = [
     year: '2024',
     desc: '《上班》是一部关于职场生活的建模 AI 动画短片，我负责后期建模与动画制作。',
     tools: ['Cinema 4D', '剪映', '即梦 AI'],
-    image: '/images/proj-shangban.png',
+    image: '/images/proj-shangban.webp',
     // 视频作品：放在 public/videos/ 下，悬停卡片自动播放（image 作为封面）
     video: '/videos/shangban.mp4',
     // 分镜头脚本照片：放在 public/images/ 下，点开项目详情后展示
-    gallery: ['/images/doc-board-1.png', '/images/doc-board-2.png', '/images/doc-board-3.png'],
+    gallery: ['/images/doc-board-1.webp', '/images/doc-board-2.webp', '/images/doc-board-3.webp'],
     galleryLabel: '分镜头脚本 — STORYBOARD',
   },
   {
@@ -90,7 +90,7 @@ export const PROJECTS = [
     year: '2025',
     desc: '负责产品实拍素材采集，结合产品特性设计多场景镜头，累计产出有效素材 200+ 条；剪辑、配乐与字幕全流程制作，突出产品环保、便捷的核心卖点。',
     tools: ['Premiere Pro', '剪映'],
-    image: '/images/proj-product.png',
+    image: '/images/proj-product.webp',
     // 视频作品：放在 public/videos/ 下，悬停卡片自动播放（image 作为封面）
     video: '/videos/slice-main.mp4',
     // 其他案例视频：放在 public/videos/ 下，点开项目详情后直接播放
@@ -105,11 +105,11 @@ export const PROJECTS = [
     year: '2026',
     desc: '统筹 3 人小组完成项目全流程，主导广西非遗螺蛳文化调研，明确 IP「年轻化、地域化」定位；完成三维建模、视觉渲染与衍生品设计，输出完整 IP 设计规范手册。',
     tools: ['Cinema 4D', 'Photoshop', '即梦 AI'],
-    image: '/images/proj-ip.png',
+    image: '/images/proj-ip.webp',
     // 视频作品：放在 public/videos/ 下，悬停卡片自动播放（image 作为封面）
     video: '/videos/luozhang.mp4',
     // 分镜头脚本照片：放在 public/images/ 下，点开项目详情后展示
-    gallery: ['/images/ip-board-1.png', '/images/ip-board-2.jpg', '/images/ip-board-3.jpg'],
+    gallery: ['/images/ip-board-1.webp', '/images/ip-board-2.webp', '/images/ip-board-3.webp'],
     galleryLabel: '过程稿 · 衍生设计 — PROCESS',
   },
   {
@@ -120,11 +120,11 @@ export const PROJECTS = [
     year: '2026',
     desc: '独立完成前期筹备与脚本特效可行性评估，制定镜头转场与场景合成技术方案；运用 AE 完成特效合成与色彩校正，实现海洋场景与历史场景的自然融合。',
     tools: ['After Effects', 'Premiere Pro', '剪映'],
-    image: '/images/proj-vfx.png',
+    image: '/images/proj-vfx.webp',
     // 视频作品：放在 public/videos/ 下，悬停卡片自动播放（image 作为封面）
     video: '/videos/beihai.mp4',
     // 分镜头脚本照片：放在 public/images/ 下，点开项目详情后展示
-    gallery: ['/images/vfx-board-1.png', '/images/vfx-board-2.png', '/images/vfx-board-3.png'],
+    gallery: ['/images/vfx-board-1.webp', '/images/vfx-board-2.webp', '/images/vfx-board-3.webp'],
     galleryLabel: '分镜头脚本 — STORYBOARD',
   },
 ]

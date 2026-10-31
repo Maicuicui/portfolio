@@ -1,0 +1,8 @@
+# 依赖与构建产物（部署时由 GitHub Actions 自动构建）
+node_modules/
+dist/
+
+# 系统与本地文件
+*.local
+.DS_Store
+Thumbs.db
